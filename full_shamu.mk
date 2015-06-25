@@ -40,7 +40,3 @@ PRODUCT_NAME := aosp_shamu
 
 PRODUCT_PACKAGES += \
     Launcher3
-
-# Extra products packages
-PRODUCT_PACKAGES += \
-	BetterBatteryStats
