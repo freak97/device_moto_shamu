@@ -19,6 +19,7 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
+
 STRICT_ALIASING := true
 KRAIT_TUNINGS := true
 USE_O3_OPTIMIZATIONS := true
@@ -26,9 +27,13 @@ USE_HOST_4_8 := true
 ENABLE_GCCONLY := true
 FLOOP_NEST_OPTIMIZE := true
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
+
+# Shamu use lz4 as ramdisk compressor
+BOARD_USE_LZ4_RD_COMPRESSOR := true
+
 TARGET_NO_BOOTLOADER := true
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
-TARGET_GCC_VERSION_ARM := 6.0
+TARGET_GCC_VERSION_ARM := 5.1
 # Define kernel config for inline building
 TARGET_KERNEL_CONFIG := despair_defconfig
 TARGET_KERNEL_SOURCE := kernel/moto/shamu
